@@ -1,0 +1,151 @@
+﻿<UserControl x:Class="nets_wpf.GUI.PageStart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit" xmlns:page="clr-namespace:nets_wpf.GUI" Name="control_pageStart" Height="540" Width="806">
+    <UserControl.Resources>
+        <Style x:Key="btn_RunStyle" TargetType="{x:Type Ellipse}">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <RadialGradientBrush GradientOrigin="0.496,1.052">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterX="0.5"  CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                <TranslateTransform X="0.02" Y="0.3"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Offset="1" Color="Green"/>
+                        <GradientStop Offset="0.4" Color="GreenYellow"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>              
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Fill">
+                        <Setter.Value>
+                            <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                <RadialGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterX="0.5"  CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                        <TranslateTransform X="0.02" Y="0.3"/>
+                                    </TransformGroup>
+                                </RadialGradientBrush.RelativeTransform>
+                                <GradientStop Offset="1" Color ="DarkGreen"/>
+                                <GradientStop Offset="0.4" Color="Green"/>
+                            </RadialGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="btn_DeleteStyle" TargetType="{x:Type Ellipse}">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <RadialGradientBrush GradientOrigin="0.496,1.052">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterX="0.5"  CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                <TranslateTransform X="0.02" Y="0.3"/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Offset="1" Color="Red"/>
+                        <GradientStop Offset="0.4" Color="LimeGreen"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Fill">
+                        <Setter.Value>
+                            <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                <RadialGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterX="0.5"  CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                        <TranslateTransform X="0.02" Y="0.3"/>
+                                    </TransformGroup>
+                                </RadialGradientBrush.RelativeTransform>
+                                <GradientStop Offset="1" Color ="DarkRed"/>
+                                <GradientStop Offset="0.4" Color="Red"/>
+                            </RadialGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    
+    <Canvas Margin="0,20,0,20" Height="500" Width="770" VerticalAlignment="Top">
+
+        <StackPanel Orientation="Vertical" Canvas.Left="0" Width="270" Height="500" Name="dp_grid_ProfileList" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <!--Height="{Binding ElementName= profileBox, Path=ActualHeight}"-->
+
+            <GroupBox  BorderThickness="0" Name="gb_profileList"  Height="300" VerticalAlignment="Top"  Width="268">
+                <!--<Canvas HorizontalAlignment="Left" VerticalAlignment="Top">-->
+                <dg:DataGrid VerticalAlignment="Top" HorizontalAlignment="Left" Width="258" Height="300" Name="dgv_profileList"  ItemsSource="{Binding ElementName=control_pageStart, Path=ProfileListView}"
+                             AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" 
+                             GridLinesVisibility="None"  Background="DarkGray"  CanUserAddRows="False" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" SelectionMode="Single"                            
+                             SelectionChanged="dgv_profileList_SelectionChanged" ClipboardCopyMode="IncludeHeader" CanUserResizeRows="False" VerticalGridLinesBrush="Black"  RowBackground="Transparent" BorderThickness="0"  
+                             SelectedIndex="-1" HeadersVisibility="None">
+                    <dg:DataGrid.CellStyle>
+                        <Style TargetType="dg:DataGridCell">
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </dg:DataGrid.CellStyle>
+
+                    <dg:DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="DarkGreen"/>
+                    </dg:DataGrid.Resources>
+
+                    <dg:DataGrid.Columns >
+                        <dg:DataGridTemplateColumn Width="258" >
+                            <dg:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate >
+                                    <StackPanel Orientation="Horizontal"  >
+                                        <Ellipse Width="20" Height="20" Margin="5,10,0,0" VerticalAlignment="Top" Name="btn_RunProfile" Style="{StaticResource btn_RunStyle}" MouseLeftButtonUp="btn_RunProfile_MouseLeftButtonUp" >
+                                            <Ellipse.ToolTip >
+                                                Run Profile
+                                            </Ellipse.ToolTip>
+                                        </Ellipse>
+                                        <Ellipse Width="20" Height="20" Margin="5,10,0,0" VerticalAlignment="Top" Name="btn_DelProfile" Style="{StaticResource btn_DeleteStyle}" MouseLeftButtonUp="btn_DelProfile_MouseLeftButtonUp">
+                                            <Ellipse.ToolTip >
+                                                Del Profile
+                                            </Ellipse.ToolTip>
+                                        </Ellipse>
+                                        <StackPanel Orientation="Vertical" Background="Transparent"  >
+                                            <!--<TextBox Height="10" Visibility="Hidden"></TextBox>-->
+                                            <!--<Button Content="Run"></Button>-->
+
+                                            <!--<Ellipse.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="true" >
+                                                            <Style="{StaticResource SelectedStyle}"></Style>
+                                                        </Trigger>
+                                                    </Ellipse.Triggers>-->
+
+                                            <TextBlock Text="{Binding ProfileName}" FontWeight="Bold" Margin="0,10,0,0"></TextBlock>
+                                            <TextBlock Text="{Binding ProfileInfo}"  Margin="0,0,0,5">
+                                                </TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </dg:DataGridTemplateColumn.CellTemplate>
+                        </dg:DataGridTemplateColumn>
+                    </dg:DataGrid.Columns>
+                </dg:DataGrid>
+                <!--</Canvas>-->
+            </GroupBox>
+            <Expander Height="200" Width="270" IsExpanded="True" Header="More">
+                <StackPanel Orientation="Vertical">
+                    <!--<Button Height="50" Name="btn_DeleteProfile" Click="dgv_btn_DeleteProfile_Click" Foreground="Black" FontSize="20" FontWeight="Bold"  VerticalAlignment="Bottom">Delete</Button>-->
+                    <Button Height="50" Name="btn_NewProfile" Click="btn_NewProfile_Click" FontSize="20" Foreground="Black" FontWeight="Bold"  >New Profile</Button>
+                    <Label Height="130" Name="txb_DropFolderToSyncArea" FontWeight="Bold" FontSize="23" VerticalContentAlignment="Center" AllowDrop="True"
+                             HorizontalContentAlignment="Center"  Width="271" Foreground="Black"  PreviewDragEnter="txb_DropFolderToSyncArea_PreviewDragEnter" 
+                             PreviewDragOver="txb_DropFolderToSyncArea_PreviewDragEnter" PreviewDrop="txb_DropFolderToSyncArea_PreviewDrop" >DROP HERE TO SYNC</Label>
+                </StackPanel>
+            </Expander>
+            <!-- end of profile list ground box -->
+        </StackPanel>
+        <Grid  Canvas.Right="0" Name="profileBox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="500" Width="500">
+            <page:PageProfileDetails x:Name="pageProfileDetails" Margin="0,0,0,369"></page:PageProfileDetails>
+        </Grid>
+        
+    </Canvas>
+
+</UserControl>

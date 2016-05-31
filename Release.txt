@@ -1,0 +1,5 @@
+\---Release
+        nets-contextmenuhandler.dll  ContextMenuHandler
+        nets.exe  Main application executable
+        nets.chm  Help file
+        RegAsm.exe  ContextMenuRegister

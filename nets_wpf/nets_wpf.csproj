@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BFC15BE-3EFF-40D5-ABF3-1704BF351F7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nets_wpf</RootNamespace>
+    <AssemblyName>nets_wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\out\compile\nets-wpf\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\out\compile\nets-wpf\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>nets_wpf.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\WPF Toolkit\v3.5.50211.1\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GUI\ApplicationWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\BackgroundWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\BureauBlack.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\ExpressionLight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\PageIVLE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\PageProfileDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\PageProfileList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\PageSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\PageStart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\SyncProgress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\TempWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataStructures\Enums.cs" />
+    <Compile Include="DataStructures\FilePair.cs" />
+    <Compile Include="DataStructures\FilterPattern.cs" />
+    <Compile Include="DataStructures\Logger.cs" />
+    <Compile Include="DataStructures\Profile.cs" />
+    <Compile Include="GUI\ApplicationWindow.xaml.cs">
+      <DependentUpon>ApplicationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BackgroundWindow.xaml.cs">
+      <DependentUpon>BackgroundWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIEventHandler.cs" />
+    <Compile Include="GUI\MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PageIVLE.xaml.cs">
+      <DependentUpon>PageIVLE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PageProfileDetails.xaml.cs">
+      <DependentUpon>PageProfileDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PageProfileList.xaml.cs">
+      <DependentUpon>PageProfileList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PageSetting.xaml.cs">
+      <DependentUpon>PageSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PageStart.xaml.cs">
+      <DependentUpon>PageStart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SyncProgress.xaml.cs">
+      <DependentUpon>SyncProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TempWindow.xaml.cs">
+      <DependentUpon>TempWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Detector.cs" />
+    <Compile Include="Logic\LogicFacade.cs" />
+    <Compile Include="Logic\Reconciler.cs" />
+    <Compile Include="obj\Debug\GUI\ApplicationWindow.g.cs" />
+    <Compile Include="obj\Debug\GUI\BackgroundWindow.g.cs" />
+    <Compile Include="obj\Debug\GUI\BureauBlack.g.cs" />
+    <Compile Include="obj\Debug\GUI\ExpressionDark.g.cs" />
+    <Compile Include="obj\Debug\GUI\ExpressionLight.g.cs" />
+    <Compile Include="obj\Debug\GUI\MessageBox.g.cs" />
+    <Compile Include="obj\Debug\GUI\PageIVLE.g.cs" />
+    <Compile Include="obj\Debug\GUI\PageProfileDetails.g.cs" />
+    <Compile Include="obj\Debug\GUI\PageProfileList.g.cs" />
+    <Compile Include="obj\Debug\GUI\PageSetting.g.cs" />
+    <Compile Include="obj\Debug\GUI\PageStart.g.cs" />
+    <Compile Include="obj\Debug\GUI\SyncProgress.g.cs" />
+    <Compile Include="obj\Debug\GUI\TempWindow.g.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Storage\LoggerHolder.cs" />
+    <Compile Include="Storage\MetaDataHolder.cs" />
+    <Compile Include="Storage\ProfileHolder.cs" />
+    <Compile Include="Storage\SettingHolder.cs" />
+    <Compile Include="Storage\StorageFacade.cs" />
+    <Compile Include="Storage\StorageOperator.cs" />
+    <Compile Include="Utility\ExceptionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\FileSystemOperator.cs" />
+    <Compile Include="Utility\JobQueueHandler.cs" />
+    <Compile Include="Utility\MetaDataManager.cs" />
+    <Compile Include="Utility\PathOperator.cs" />
+    <Compile Include="Utility\RegistryOperator.cs" />
+    <Compile Include="Utility\SecureVault.cs" />
+    <Compile Include="Utility\StringFormatPattern.cs" />
+    <Compile Include="Utility\XmlTool.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GUI\image\Background.png" />
+    <Resource Include="GUI\image\btn_center.png" />
+    <Resource Include="GUI\image\btn_DeleteProfile.png" />
+    <Resource Include="GUI\image\btn_FolderABrowse.png" />
+    <Resource Include="GUI\image\btn_RunProfile.png" />
+    <Resource Include="GUI\image\btn_runProfile_hover.png" />
+    <Resource Include="GUI\image\btn_runProfile_normal.png" />
+    <Resource Include="GUI\image\btn_Stop.png" />
+    <Resource Include="GUI\image\btn_TabAboutUs.png" />
+    <Resource Include="GUI\image\btn_TabCloseProgram.png" />
+    <Resource Include="GUI\image\btn_TabHelp.png" />
+    <Resource Include="GUI\image\btn_TabIVLE.png" />
+    <Resource Include="GUI\image\btn_TabProfiles.png" />
+    <Resource Include="GUI\image\btn_TabSettings.png" />
+    <Resource Include="GUI\image\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="v3.5.50211.1\System.Windows.Controls.Input.Toolkit.dll" />
+    <Content Include="v3.5.50211.1\System.Windows.Controls.Input.Toolkit.pdb" />
+    <Content Include="v3.5.50211.1\WPFToolkit.dll" />
+    <Content Include="v3.5.50211.1\WPFToolkit.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

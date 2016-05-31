@@ -1,0 +1,27 @@
+﻿Usages:
+
+1/ To run a general synchronization.
+          nets [options] <source folder> <destination folder>
+where [options] are
+    -m|--mirror|-e|--equalize
+        Specify the operation to be performed.
+        Default mode: --mirror
+    -s|--safe|-q|--quiet
+        Specify conflict resolution method.
+        Default: --quiet.
+    -p|--profile <profile name>
+        Save the settings as a profile for subsequent run.
+        
+2/ To run a set of predefined profile.
+         nets -r|--run-profile <profile>+
+Use * to run all saved profiles.
+
+3/ To get help.
+         nets -h|--help <topics>*
+    Display help for the specified topics.
+    Topics are synchronize, profile, help.
+    If none is specified, this help message will be display.
+
+4/ Invoke interactive mode: use no argument.
+         nets
+         

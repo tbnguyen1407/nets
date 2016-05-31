@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="nets_wpf.GUI.PageSetting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="161" Width="403">
+    <Canvas Height="234" Width="441">
+        <CheckBox Canvas.Left="25" Canvas.Top="23" Height="25" Name="cbx_SettingContextMenu" Width="255">Add Context Menu entries</CheckBox>
+        <Button Canvas.Left="139" Canvas.Bottom="18" Width="150" Height="40" FontSize="15" FontWeight="Bold" Name="btn_ApplySetting" Click="btn_ApplySetting_Click">Apply</Button>
+        <CheckBox Canvas.Left="25" Canvas.Top="52" Height="25" Name="cbx_SettingAutoComplete" Width="255">Enable autocomplete for profile name</CheckBox>
+        <CheckBox Canvas.Left="25" Canvas.Top="80" Height="25" Name="cbx_SettingDeleteToRecycleBin" Width="255">Delete files to recycle bin</CheckBox>
+    </Canvas>
+</UserControl>

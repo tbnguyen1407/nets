@@ -1,0 +1,72 @@
+﻿<Window x:Class="nets_wpf.GUI.ApplicationWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:page="clr-namespace:nets_wpf.GUI" Title="NETS"  WindowStyle="None"  SizeToContent="WidthAndHeight" ResizeMode="NoResize"  
+        MouseLeftButtonDown="NonRectangularWindow_MouseLeftButtonDown" Background="Black" BorderThickness="5" >
+    <!--<Window.Background x:Uid="0" >
+        <ImageBrush ImageSource="image/Background.png"  AlignmentY="Top" AlignmentX="Left" Stretch="None"></ImageBrush>
+    </Window.Background >-->
+    <Window.Resources>
+        <ResourceDictionary Source="ExpressionDark.xaml"  x:Name="MainAppResource">
+            
+            <!--<ResourceDictionary Source="ExpressionDark.xaml"  x:Name="MainAppResource"/>-->
+        </ResourceDictionary>
+    </Window.Resources>
+    <StackPanel Orientation ="Vertical" >
+    <Grid Margin="0,0,0,20" Height="100" Name="dp_grid_ProfileList" Width="768" >           
+            <Button  Height="20" Name="btn_delete"  Click="ExitProgram" HorizontalAlignment="Right" Width="20" Margin="30,5,10,0" VerticalAlignment="Top">x</Button>
+            <Button Height="20" Name="btn_minimize" Click="MinimizeWindow" Width="20" VerticalAlignment="Top" Margin="0,5,42,0" HorizontalAlignment="Right" BorderBrush="Transparent">-</Button>
+         
+            <!--<Grid Margin="0,45,0,0" Background="DarkRed"  Width="800">
+                <Label HorizontalAlignment="Left" Name="label1" Style="{StaticResource MenuStyle}" Margin="10,15,0,-15" Width="100"> Profile </Label>
+                <Label HorizontalAlignment="Left" Name="label2" Style="{StaticResource MenuStyle}" Margin="96,15,0,12" Width="87">IVLE</Label>
+                <Label Name="label5" Style="{StaticResource MenuStyle}" Margin="182,15,0,0" HorizontalAlignment="Left" Width="100">Setting</Label>
+                <Label Name="label3" Style="{StaticResource MenuStyle}" Margin="279,15,0,-3" HorizontalAlignment="Left" Width="97">About</Label>
+                <Label Name="label4" Style="{StaticResource MenuStyle}" Margin="372,15,328,8">Help</Label>
+                <Label HorizontalAlignment="Right" Name="label6" Style="{StaticResource MenuStyle}" Margin="0,15,259,12" Width="93">Exit</Label>
+            </Grid>-->
+            <Button  Width="128" Height="66" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Click="PageStart_Click" VerticalAlignment="Bottom" >
+                <Canvas Height="65" Width="128" >
+                    <Image Canvas.Top="2" Source="image\btn_tabProfiles.png" Width="50" Height="60"></Image>
+                    <Label Canvas.Left="50" Canvas.Top="15" FontWeight="Bold" FontSize="20" Foreground="Black" >Profile</Label>
+                </Canvas>
+            </Button>
+            <Button Width="128" Height="66" Click="PageSetting_Click" HorizontalAlignment="Left" Margin="128,0,0,0" VerticalAlignment="Bottom" >
+                <Canvas Height="65" Width="128">
+                    <Image Canvas.Top="2" Source="image\btn_tabSettings.png" Width="50" Height="60"></Image>
+                    <Label Canvas.Left="50" Canvas.Top="15" FontWeight="Bold" FontSize="20" Foreground="Black">Setting</Label>
+                </Canvas>
+            </Button>
+            <Button Width="128" Height="66" Click="PageIVLE_Click" Margin="256,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+                <Canvas Height="63" Width="128">
+                    <Image Canvas.Top="2" Source="image\btn_tabIVLE.png" Width="60" Height="60"></Image>
+                    <Label Canvas.Left="60" Canvas.Top="15" FontWeight="Bold" FontSize="20" Foreground="Black">IVLE</Label>
+                </Canvas>
+            </Button>
+            <Button Width="128" Height="66" Margin="384,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <Canvas Height="63" Width="128">
+                    <Image Canvas.Top="0" Source="image\btn_tabAboutUs.png" Width="60" Height="60" ></Image>
+                    <Label Canvas.Left="60" Canvas.Top="15" FontWeight="Bold" FontSize="20" Foreground="Black">About</Label>
+                </Canvas>
+            </Button>
+            <Button Width="128" Height="66" Margin="512,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+                <Canvas Height="63" Width="128">
+                    <Image Canvas.Top="0" Source="image\btn_tabHelp.png" Width="60" Height="60"></Image>
+                    <Label Canvas.Left="60" Canvas.Top="15" FontWeight="Bold" FontSize="20" Foreground="Black">Help</Label>
+                </Canvas>
+            </Button>
+            <Button  Width="128" Height="66" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                <Canvas Height="63" Width="128">
+                    <Image Canvas.Top="2" Source="image\btn_tabCloseProgram.png" Width="60" Height="60"></Image>
+                    <Label Canvas.Left="60" Canvas.Top="15" FontWeight="Bold" FontSize="20" Foreground="Black">Exit</Label>
+                </Canvas>
+            </Button>
+        </Grid>
+ 
+        <Grid  Name="WindowMainContent" VerticalAlignment="Top" >
+            <page:PageStart x:Name="pageStart" Margin="0,0,3,0" Visibility="Hidden"></page:PageStart>
+            <page:PageSetting x:Name="pageSetting" Margin="23,0,3,22" Grid.RowSpan="4" Grid.ColumnSpan="8" Visibility="Hidden"></page:PageSetting>
+            <page:PageIVLE x:Name="pageIVLE" Margin="23,0,3,22" Grid.RowSpan="4" Grid.ColumnSpan="8" Visibility="Hidden"></page:PageIVLE>
+        </Grid>
+    </StackPanel>
+</Window>
+

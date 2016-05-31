@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OrderedTest name="OrderedTest1" storage="d:\course modules\year 3\semester 2\cs3215 se project\nets offline\nets\netstesting\orderedtest1.orderedtest" id="394b7664-b60d-4e99-bd99-eb37147e19b5" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Css projectStructure="" iteration="" />
+  <Execution timeOut="2147483647" />
+  <Owners>
+    <Owner name="" />
+  </Owners>
+  <TestLinks>
+    <TestLink id="558df5ac-0dd2-62ad-bc9f-49d98e0816e6" name="SameFolder" storage="bin\debug\netstesting.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d53b4ec9-80a5-e31a-1acd-790c58bdcee6" name="NoChange__Deleted" storage="bin\debug\netstesting.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="8592a334-14cf-6fcd-d49d-0093461ef9b3" name="NoChange__NoChange" storage="bin\debug\netstesting.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d5b87b37-253e-0844-4110-4bed6461beb5" name="NoChange__NoChange_ad" storage="bin\debug\netstesting.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="9fd3d0f7-d8af-f723-b78c-8f9df28b2392" name="Deleted__NoChange" storage="bin\debug\netstesting.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{12A61E1C-C85E-4D55-96DD-2E9C549F269B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>nets</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationManifest>nets.manifest</ApplicationManifest>
+    <ApplicationIcon>nets.ico</ApplicationIcon>
+    <StartupObject>nets.Program</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\out\compile\nets\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\out\compile\nets\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>nets</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.3.9.1, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Ivle Workbin Synchronizer\Ivle Workbin Synchronizer\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dataclass\IvleWorkbin.cs" />
+    <Compile Include="dataclass\IvleWorkbinFile.cs" />
+    <Compile Include="dataclass\IvleWorkbinFolder.cs" />
+    <Compile Include="gui\ApplicationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\ApplicationWindow.Designer.cs">
+      <DependentUpon>ApplicationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\PageAboutUs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\PageAboutUs.Designer.cs">
+      <DependentUpon>PageAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\PageIVLE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\GUIEventHandler.cs" />
+    <Compile Include="gui\PageProfileList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\PageSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\PageStart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\PageStart.Designer.cs">
+      <DependentUpon>PageStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\PageProfileDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\SyncProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\SyncProgress.Designer.cs">
+      <DependentUpon>SyncProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\TempWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\TempWindow.Designer.cs">
+      <DependentUpon>TempWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataclass\Enums.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="utility\ExceptionHandler.cs" />
+    <Compile Include="utility\FormButtonDisabler.cs" />
+    <Compile Include="utility\MetaDataManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utility\FileSystemOperator.cs" />
+    <Compile Include="utility\IvleOutput.cs" />
+    <Compile Include="utility\JobQueueHandler.cs" />
+    <Compile Include="utility\PathOperator.cs" />
+    <Compile Include="utility\RegistryOperator.cs" />
+    <Compile Include="ivle\Credential.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ivle\InfoManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ivle\IvleHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ivle\IvleParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ivle\LocalUpdater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ivle\UpdateDetector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="logic\Detector.cs" />
+    <Compile Include="dataclass\FilePair.cs" />
+    <Compile Include="dataclass\FilterPattern.cs" />
+    <Compile Include="logic\LogicFacade.cs" />
+    <Compile Include="logic\Reconciler.cs" />
+    <Compile Include="program.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="storage\ProfileHolder.cs" />
+    <Compile Include="storage\SettingHolder.cs" />
+    <Compile Include="dataclass\Logger.cs" />
+    <Compile Include="storage\LoggerHolder.cs" />
+    <Compile Include="storage\MetaDataHolder.cs" />
+    <Compile Include="dataclass\Profile.cs" />
+    <Compile Include="storage\StorageFacade.cs" />
+    <Compile Include="storage\StorageOperator.cs" />
+    <Compile Include="utility\ExtendedWebClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utility\SecureVault.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utility\StringFormatPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utility\XmlTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gui\ApplicationWindow.resx">
+      <DependentUpon>ApplicationWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <LastGenOutput>ApplicationWindow1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\PageAboutUs.resx">
+      <DependentUpon>PageAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\PageProfileList..resx" />
+    <EmbeddedResource Include="gui\PageSettings.resx">
+      <DependentUpon>PageSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\PageStart.resx">
+      <DependentUpon>PageStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\SyncProgress.resx">
+      <DependentUpon>SyncProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\TempWindow.resx">
+      <DependentUpon>TempWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\btn_TabProfiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_TabSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_TabAboutUs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_TabCloseProgram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_TabHelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_RunProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_DeleteProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_FolderABrowse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_TabIVLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_AddToExcludeList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gui\PageIVLE.resx">
+      <DependentUpon>PageIVLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="nets.manifest" />
+    <None Include="Resources\btn_AddToIncludeList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\HtmlAgilityPack.dll" />
+    <Content Include="lib\HtmlAgilityPack.pdb" />
+    <Content Include="lib\HtmlAgilityPack.XML" />
+    <Content Include="nets.ico" />
+    <None Include="Resources\netsLogo.png" />
+    <None Include="Resources\nets.ico" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\profileName.png" />
+    <None Include="Resources\SrcDes.png" />
+    <None Include="Resources\rightClickMenu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

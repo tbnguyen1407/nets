@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="nets_wpf.GUI.PageIVLE"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+
+    <Canvas Name="cv_main" Height="270" Width="506" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Label HorizontalAlignment="Left" Margin="0,15,0,0" Name="lb_username" Width="80" Height="25" VerticalAlignment="Top" Grid.ColumnSpan="2" Canvas.Left="14" Canvas.Top="1">User Name:</Label>
+        <TextBox Margin="14,16,0,0" Name="tbx_userName" Height="23" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Canvas.Left="78" Canvas.Top="2" Width="204" />
+        <Label Margin="0,46,0,0" Name="lb_password" Height="27" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="0" Width="62.557">Password:</Label>
+        <PasswordBox Margin="14,48,0,0" Name="tbx_password" Grid.Column="1" Grid.ColumnSpan="2" Height="27" VerticalAlignment="Top" Canvas.Left="78" Canvas.Top="-2" Width="204" />
+        <TextBox Margin="14,80,34,95" Name="tbx_saveTo" Grid.Column="1" Grid.ColumnSpan="2" Height="21.96" Canvas.Left="78" Canvas.Top="0" Width="171" />
+        <Button Margin="14,0,0,37" Name="btn_update" Grid.Column="1" Height="26" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Click="btn_update_Click" Canvas.Left="78" Canvas.Top="147.603" Width="204">Update IVLE</Button>
+        <Expander Header="View Log" VerticalAlignment="Top" Margin="8,170,9,7.226" Name="exd_viewLog" Grid.ColumnSpan="6" ExpandDirection="Down" IsExpanded="False" Expanded="exd_viewLog_Expanded" Collapsed="exd_viewLog_Collapsed" Height="35" Canvas.Left="6" Canvas.Top="25" Width="470">
+            <TextBlock Name="tbx_viewLog" Height="200">  Update Log:</TextBlock>
+        </Expander>
+        <!--<Image Grid.Column="3" Margin="10,53,0,0" Name="image1" Stretch="Fill" Source="C:\Users\Yen Duong\Desktop\Ivle v1.0\Ivle v1.0\Ivle v1.0\image\nusLogo.jpg" Grid.ColumnSpan="2" />-->
+        <Label HorizontalAlignment="Left" Margin="1,83,0,89" Name="lb_saveTo" Width="87" Grid.ColumnSpan="2" Height="25.96" Canvas.Left="13" Canvas.Top="-5">Save to:</Label>
+        <CheckBox Margin="14,0,26,58" Name="cbx_rememberPw" Height="28" VerticalAlignment="Bottom" Grid.Column="1" Grid.ColumnSpan="2" Canvas.Left="78" Canvas.Top="120.189" Width="128">Remember Password</CheckBox>
+        <Button Grid.Column="2" Margin="0,80,0,95" Name="btn_folderSaveTo" Click="ChooseFolder" HorizontalAlignment="Right" Width="30.457" Height="21.96" Canvas.Left="265.543" Canvas.Top="0">...</Button>
+        <my:Calendar Grid.Column="3" Grid.ColumnSpan="3" Margin="23,6,7,37" Name="calendar1" xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit" Height="162" Canvas.Left="283" Canvas.Top="5.603" Width="178" />
+    </Canvas>
+</UserControl>

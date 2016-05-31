@@ -1,0 +1,8 @@
+﻿<Window x:Class="nets_wpf.GUI.BackgroundWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStyle="None" ResizeMode="NoResize"
+    Title="BackgroundWindow" Height="0" Width="0">
+    <Grid>
+        
+    </Grid>
+</Window>

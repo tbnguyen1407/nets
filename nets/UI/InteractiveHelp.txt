@@ -1,0 +1,10 @@
+﻿Interactive mode
+This mode allows user to use interactive command to communicate with the system
+instead of typing the full console command. In this mode, the commands supported
+are:
+help	Display the help for this interactive mode.
+run		Run a (list) of profiles
+start	Start synchronization
+save	Save the current settings into a profile
+show	Display the information such as the list of profiles and settings for specific profiles
+exit	Exit the program
