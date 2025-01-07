@@ -21,24 +21,24 @@ namespace nets_contextmenuhandler
         protected const string Guid = "{33612C08-B156-4ad2-9599-049A685B8CD0}";
         protected string FileNames;
         protected uint m_hDrop = 0;
-        const int S_OK    = 0;
+        const int S_OK = 0;
         const int S_FALSE = 1;
         protected string IconFile;
         private const uint E_NOTIMPL = 0x80004001;
         private const uint QITIPF_DEFAULT = 0;
-        private const uint GIL_SIMULATEDOC   = 0x0001;     // simulate this document icon for this
-        private const uint GIL_PERINSTANCE   = 0x0002;     // icons from this class are per instance (each file has its own)
-        private const uint GIL_PERCLASS      = 0x0004;      // icons from this class per class (shared for all files of this type)
-        private const uint GIL_NOTFILENAME   = 0x0008;     // location is not a filename, must call ::ExtractIcon
-        private const uint GIL_DONTCACHE     = 0x0010;      // this icon should not be cached
-        private const uint GIL_SHIELD        = 0x0200;      // icon should be "stamped" with the LUA shield
+        private const uint GIL_SIMULATEDOC = 0x0001;     // simulate this document icon for this
+        private const uint GIL_PERINSTANCE = 0x0002;     // icons from this class are per instance (each file has its own)
+        private const uint GIL_PERCLASS = 0x0004;      // icons from this class per class (shared for all files of this type)
+        private const uint GIL_NOTFILENAME = 0x0008;     // location is not a filename, must call ::ExtractIcon
+        private const uint GIL_DONTCACHE = 0x0010;      // this icon should not be cached
+        private const uint GIL_SHIELD = 0x0200;      // icon should be "stamped" with the LUA shield
         private const uint GIL_FORCENOSHIELD = 0x0400;
-        private const uint IDS_PROJNAME      = 100;
-        private const uint IDI_ZERO_BYTES    = 100;
+        private const uint IDS_PROJNAME = 100;
+        private const uint IDI_ZERO_BYTES = 100;
         private const uint IDR_TXTICONSHLEXT = 101;
-        private const uint IDI_UNDER_4K      = 101;
-        private const uint IDI_UNDER_8K      = 102;
-        private const uint IDI_OVER_8K       = 103;
+        private const uint IDI_UNDER_4K = 101;
+        private const uint IDI_UNDER_8K = 102;
+        private const uint IDI_OVER_8K = 103;
         private string tip = string.Empty;
 
         #endregion
@@ -77,7 +77,7 @@ namespace nets_contextmenuhandler
                     m_hDrop = medium.hGlobal;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
             return 0;
@@ -115,7 +115,7 @@ namespace nets_contextmenuhandler
                     psci.wszDescription = "Provides column2 information";
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return S_FALSE;
             }
@@ -137,7 +137,7 @@ namespace nets_contextmenuhandler
 
                 pvarData = "tooltip";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return S_FALSE;
             }
@@ -154,7 +154,7 @@ namespace nets_contextmenuhandler
             if ((uFlags & 0xf) == 0 || (uFlags & (uint)CMF.CMF_EXPLORE) != 0)
             {
                 uint nselected = Win32Helpers.DragQueryFile(m_hDrop, 0xffffffff, null, 0);
-                
+
                 for (uint uFile = 0; uFile < nselected; uFile++)
                 {
                     // Get the next filename.
@@ -229,7 +229,7 @@ namespace nets_contextmenuhandler
             {
                 Type typInvokecommandinfo = Type.GetType("nets_contextmenuhandler.INVOKECOMMANDINFO");
                 INVOKECOMMANDINFO ici = (INVOKECOMMANDINFO)Marshal.PtrToStructure(pici, typInvokecommandinfo);
-                
+
                 string applicationPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\nets.exe";
                 FileNames = FileNames.Substring(0, FileNames.Length - 1);
 
@@ -243,7 +243,7 @@ namespace nets_contextmenuhandler
                         break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -303,7 +303,7 @@ namespace nets_contextmenuhandler
                 //pwFlags = (UIntPtr)Flags;
                 return S_OK;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return S_FALSE;
             }
@@ -314,24 +314,24 @@ namespace nets_contextmenuhandler
             {
                 Bitmap Image = new Bitmap(IconFile);
                 if (null != phiconLarge)
-                { 
+                {
                     Bitmap Large;
                     Large = (Bitmap)Image.GetThumbnailImage(32, 32, null, IntPtr.Zero);
                     phiconLarge = Large.GetHicon();
                     Large.Dispose();
-                  
+
                 }
                 if (null != phiconSmall)
-                {   
+                {
                     Bitmap Small;
-                    Small =(Bitmap)Image.GetThumbnailImage(16, 16, null, IntPtr.Zero);
+                    Small = (Bitmap)Image.GetThumbnailImage(16, 16, null, IntPtr.Zero);
                     phiconSmall = Small.GetHicon();
-                    Small.Dispose(); 
+                    Small.Dispose();
                 }
                 Image.Dispose();
                 return S_OK;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return S_FALSE;
             }
@@ -360,7 +360,7 @@ namespace nets_contextmenuhandler
                 // Tell Explorer to refresh
                 SHChangeNotify(SHCNE_ASSOCCHANGED, 0, IntPtr.Zero, IntPtr.Zero);
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
         }
@@ -387,7 +387,7 @@ namespace nets_contextmenuhandler
 
                 SHChangeNotify(SHCNE_ASSOCCHANGED, 0, IntPtr.Zero, IntPtr.Zero);
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
         }

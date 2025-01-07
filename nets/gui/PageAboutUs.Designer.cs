@@ -2,7 +2,7 @@
 
 namespace nets.gui
 {
-    partial class PageAboutUs: Panel
+    partial class PageAboutUs : Panel
     {
         #region Window Form Designer Generated codes
 
@@ -102,7 +102,7 @@ namespace nets.gui
             this.lb_BriefIntro.Name = "lb_BriefIntro";
             this.lb_BriefIntro.Size = new System.Drawing.Size(238, 64);
             this.lb_BriefIntro.TabIndex = 0;
-            this.lb_BriefIntro.Text = "Free and Opensource\r\nWindows XP/Vista/7\r\nRequires .NET Framework 3.0";
+            this.lb_BriefIntro.Text = "Free and Opensource\r\nWindows XP and above\r\nRequires .NET Framework 4.8.1";
             // 
             // PageAboutUs
             // 
